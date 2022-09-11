@@ -22,15 +22,12 @@ public class Main {
 			return 0;
 		}
 		
-		Arrays.sort(arr,new Comparator<int[]>() {
-			@Override
-			public int compare(int[] o1, int[] o2) {
-				if(o1[0] > o2[0]) {
-					return 1;
-				}
-				return -1;
-			}
-		});
+		Arrays.sort(arr, (Comparator<int[]>) (o1, o2) -> {
+            if(o1[0] > o2[0]) {
+                return 1;
+            }
+            return -1;
+        });
 		
 		int rooms = 1;
 		
